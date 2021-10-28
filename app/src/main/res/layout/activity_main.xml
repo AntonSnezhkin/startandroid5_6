@@ -113,7 +113,7 @@
         android:id="@+id/llSecret"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C1BDBDBD"
+        android:background="#A8000000"
         android:visibility="invisible">
 
         <com.google.android.material.button.MaterialButton

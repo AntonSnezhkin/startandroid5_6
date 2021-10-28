@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setMessage(getResources().getString(R.string.alertMassage))
                         .setCancelable(false)
                         .setPositiveButton(getResources().getString(R.string.alertPositiveButton), (dialogInterface, i) -> {
-
+                        return;
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
