@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">StartAndroid5and6</string>
     <string name="text_View">Вводим числа:</string>
-    <string name="_1">Toast</string>
-    <string name="_2">Snackbar</string>
-    <string name="_3">Dialog</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
+    <string name="btnToast">Toast</string>
+    <string name="btnSnackbar">Snackbar</string>
+    <string name="btnDialog">Dialog</string>
+    <string name="btnTouchDown">Touch Down</string>
+    <string name="btnTouchUp">Touch Up</string>
     <string name="_6">6</string>
     <string name="_7">7</string>
     <string name="_8">8</string>
@@ -17,4 +17,6 @@
     <string name="titleName">"Dialog"</string>
     <string name="alertMassage">"А это вот AlertDialog"</string>
     <string name="alertPositiveButton">"ОК"</string>
+    <string name="toast_btnTouchDown">А ну уйди!</string>
+    <string name="toast_btnTouchUp">Куда ушел вернись!</string>
 </resources>

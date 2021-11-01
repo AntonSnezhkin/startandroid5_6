@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,14 +15,14 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnSecret, button1, button2, button3;
+        Button btnSecret, button1, button2, button3, button4, button5;
 
         TextView textView = findViewById(R.id.textView);
         textView.setOnClickListener(this);
@@ -38,12 +39,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button3 = findViewById(R.id.button3);
         button3.setOnClickListener(this);
 
+        button4 = findViewById(R.id.button4);
+        button4.setOnTouchListener(this);
+
+        button5 = findViewById(R.id.button5);
+        button5.setOnTouchListener(this);
+
+
+
     }
 
     @Override
     public void onClick(View view) {
         ConstraintLayout llSecret;
-        llSecret = (ConstraintLayout) findViewById(R.id.llSecret);
+        llSecret = findViewById(R.id.llSecret);
         switch (view.getId()) {
             case R.id.textView:
                 llSecret.setVisibility(View.VISIBLE);
@@ -68,7 +77,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlertDialog alert = builder.create();
                 alert.show();
                 break;
+
+            case R.id.button4:
+                Toast.makeText(this, getResources().getString(R.string.toast_btnTouchDown), Toast.LENGTH_SHORT).show();
+                break;
         }
 
+    }
+
+
+    @Override
+
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        switch (view.getId()) {
+            case (R.id.button4):
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    Toast.makeText(this, getResources().getString(R.string.toast_btnTouchDown), Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                break;
+            case (R.id.button5):
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    Toast.makeText(this, getResources().getString(R.string.toast_btnTouchUp), Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                break;
+        }
+
+        return false;
     }
 }

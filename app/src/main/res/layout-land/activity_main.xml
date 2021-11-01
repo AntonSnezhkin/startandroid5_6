@@ -46,21 +46,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_1" />
+                    android:text="@string/btnToast" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_2" />
+                    android:text="@string/btnSnackbar" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_3" />
+                    android:text="@string/btnDialog" />
             </TableRow>
 
             <TableRow
@@ -72,14 +72,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_4" />
+                    android:text="@string/btnTouchDown" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_5" />
+                    android:text="@string/btnTouchUp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button6"
@@ -123,16 +123,20 @@
         android:id="@+id/llSecret"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C1BDBDBD"
+        android:background="#A8FFFFFF"
         android:visibility="invisible">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSecret"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="100dp"
             android:text="@string/btn_secret"
+            android:padding="6dp"
+            android:textColor="@color/purple_500"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/teal_200"
+            app:strokeWidth="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
