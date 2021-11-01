@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -77,17 +75,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlertDialog alert = builder.create();
                 alert.show();
                 break;
-
             case R.id.button4:
                 Toast.makeText(this, getResources().getString(R.string.toast_btnTouchDown), Toast.LENGTH_SHORT).show();
                 break;
         }
-
     }
 
-
     @Override
-
     public boolean onTouch(View view, MotionEvent motionEvent) {
         switch (view.getId()) {
             case (R.id.button4):
@@ -103,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
-
         return false;
     }
 }
