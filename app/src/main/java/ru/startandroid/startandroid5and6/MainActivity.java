@@ -2,6 +2,7 @@ package ru.startandroid.startandroid5and6;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -13,6 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity  {
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity  {
                 .setMessage(getResources().getString(R.string.alertMassage))
                 .setCancelable(false)
                 .setPositiveButton(getResources().getString(R.string.alertPositiveButton), (dialogInterface, i) -> {
-                return;
                 });
         AlertDialog alert = builder.create();
         alert.show();});
@@ -65,8 +66,5 @@ public class MainActivity extends AppCompatActivity  {
         }
         return false;
         });
-
-
-
     }
 }
