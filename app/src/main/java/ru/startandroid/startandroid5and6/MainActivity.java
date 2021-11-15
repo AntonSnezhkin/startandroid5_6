@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity  {
         button4.setOnTouchListener((view, motionEvent) -> {
         if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
             Toast.makeText(this, getResources().getString(R.string.toast_btnTouchDown), Toast.LENGTH_SHORT).show();
-            return true;
+            return false;
         }
             return false;
         });
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity  {
         button5.setOnTouchListener((view, motionEvent) -> {
         if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
             Toast.makeText(this, getResources().getString(R.string.toast_btnTouchUp), Toast.LENGTH_SHORT).show();
-            return true;
+            return false;
         }
         return false;
         });
