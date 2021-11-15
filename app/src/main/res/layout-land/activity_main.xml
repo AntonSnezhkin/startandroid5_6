@@ -12,7 +12,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
@@ -28,6 +28,7 @@
                 android:ems="10"
                 android:hint="@string/hint_123456789"
                 android:inputType="numberDecimal"
+                android:minHeight="48dp"
                 android:text="" />
 
         </LinearLayout>
@@ -46,21 +47,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_1" />
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/btnToast" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_2" />
+                    android:text="@string/btnSnackbar" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_3" />
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/btnDialog" />
             </TableRow>
 
             <TableRow
@@ -71,15 +76,16 @@
                     android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:autoSizeMinTextSize="@dimen/cardview_compat_inset_shadow"
                     android:layout_weight="1"
-                    android:text="@string/_4" />
+                    android:text="@string/btnTouchDown" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/_5" />
+                    android:text="@string/btnTouchUp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button6"
@@ -98,6 +104,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
                     android:text="@string/_7" />
 
                 <com.google.android.material.button.MaterialButton
@@ -112,6 +120,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
                     android:text="@string/_9" />
             </TableRow>
 
@@ -123,16 +133,20 @@
         android:id="@+id/llSecret"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C1BDBDBD"
+        android:background="#A8FFFFFF"
         android:visibility="invisible">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSecret"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="100dp"
             android:text="@string/btn_secret"
+            android:padding="6dp"
+            android:textColor="@color/purple_500"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/teal_200"
+            app:strokeWidth="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
